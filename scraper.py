@@ -14,7 +14,7 @@ record = {}
 root = lxml.html.fromstring(html)
 names = root.cssselect("td div a")
 for name in names:
-  print name.text
+ # print name.text
   print name.attrib['href']
   #store the link in the variable 'record' under the key 'link'
   record['link'] = name.attrib['href']
