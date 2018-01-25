@@ -23,12 +23,8 @@ for name in names:
   print record
   scraperwiki.sqlite.save(unique_keys=['link'], data=record)
 
-root = lxml.html.fromstring(html)
 pictures = root.cssselect("td a img")
 print pictures
-for name in pictures
-print name.attrib['href']
-
   
 #
 # # Write out to the sqlite database using scraperwiki library
