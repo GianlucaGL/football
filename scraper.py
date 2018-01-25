@@ -31,7 +31,7 @@ for td in tds:
  if "years" in div:
   print div
   record['age'] = div
-  scraperwiki.sqlite.save(unique_keys=['age'], data=record)
+  scraperwiki.sqlite.save(unique_keys=['age'], data=record, table_name=ages)
                       
                           
                           
