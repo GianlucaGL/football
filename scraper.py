@@ -26,6 +26,12 @@ for name in names:
 tds = root.cssselect("td div")
 print 'THESE ARE THE TDS', tds
 print 'THERE ARE', len(tds), 'TDS'
+for td in tds:
+ div = td.text_content().encode('ascii','ignore')
+ if "years" in div:
+  print "YIPPEE"
+  record['age'] = div
+  scraperwiki.sqlite.save(unique_keys=['age'], data=record)
                       
                           
                           
