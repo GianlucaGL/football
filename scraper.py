@@ -23,8 +23,8 @@ for name in names:
   print record
   scraperwiki.sqlite.save(unique_keys=['link'], data=record)
 
-ages = root.cssselect("td div[2]")
-print ages
+tds = rott.cssselect("td div")
+print 'THESE ARE THE TDS', tds
                       
                           
                           
