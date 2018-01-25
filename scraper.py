@@ -22,6 +22,13 @@ for name in names:
   record['name'] = name.text.encode('ascii', 'ignore')
   print record
   scraperwiki.sqlite.save(unique_keys=['link'], data=record)
+
+root = lxml.html.fromstring(html)
+pictures = root.cssselect("img")
+for picture in pictures:
+record['picture'] = picture.attrib['img']
+print record
+
   
 #
 # # Write out to the sqlite database using scraperwiki library
