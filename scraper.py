@@ -26,7 +26,7 @@ for name in names:
 root = lxml.html.fromstring(html)
 pictures = root.cssselect("img")
 for picture in pictures:
- record['picture'] = picture.attrib['img']
+ record['picture'] = picture.attrib['href']
  print record
 
   
