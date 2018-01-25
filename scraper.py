@@ -24,7 +24,7 @@ for name in names:
   scraperwiki.sqlite.save(unique_keys=['link'], data=record)
 
 root = lxml.html.fromstring(html)
-pictures = root.cssselect("img")
+pictures = root.cssselect("td a img")
 print pictures
 
   
