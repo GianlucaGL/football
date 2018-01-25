@@ -23,8 +23,11 @@ for name in names:
   print record
   scraperwiki.sqlite.save(unique_keys=['link'], data=record)
 
-pictures = root.cssselect("td a img")
-print pictures
+ages = root.cssselect("td div[3]")
+print ages
+                      
+                          
+                          
   
 #
 # # Write out to the sqlite database using scraperwiki library
