@@ -29,7 +29,7 @@ print 'THERE ARE', len(tds), 'TDS'
 for td in tds:
  div = td.text_content().encode('ascii','ignore')
  if "years" in div:
-  print "YIPPEE"
+  print div
   record['age'] = div
   scraperwiki.sqlite.save(unique_keys=['age'], data=record, table_name = "ages")
                       
