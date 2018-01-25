@@ -25,6 +25,7 @@ for name in names:
 
 tds = root.cssselect("td div")
 print 'THESE ARE THE TDS', tds
+print 'THERE ARE', len(tds), 'TDS'
                       
                           
                           
