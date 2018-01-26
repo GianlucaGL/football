@@ -40,7 +40,6 @@ for age in ages:
  div = age.text_content().encode('ascii','ignore')
  if "years" in div:
   print age.text.encode('ascii', 'ignore')
-  print age.attrib['href']
 #record['ages'] = name.text.encode('ascii', 'ignore')
 #print record
   
