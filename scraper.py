@@ -11,17 +11,17 @@ html = scraperwiki.scrape("https://uk.soccerway.com/teams/england/chelsea-footba
 record = {}
 
 # # Find something on the page using css selectors
-root = lxml.html.fromstring(html)
-names = root.cssselect("td div a")
-for name in names:
+#root = lxml.html.fromstring(html)
+#names = root.cssselect("td div a")
+#for name in names:
  # print name.text
-  print name.text.encode('ascii', 'ignore')
-  print name.attrib['href']
+  #print name.text.encode('ascii', 'ignore')
+  #print name.attrib['href']
   #store the link in the variable 'record' under the key 'link'
-  record['link'] = name.attrib['href']
-  record['name'] = name.text.encode('ascii', 'ignore')
-  print record
-  scraperwiki.sqlite.save(unique_keys=['link'], data=record)
+  #record['link'] = name.attrib['href']
+  #record['name'] = name.text.encode('ascii', 'ignore')
+  #print record
+  #scraperwiki.sqlite.save(unique_keys=['link'], data=record)
 
 # tds = root.cssselect("td div")
 # print 'THESE ARE THE TDS', tds
