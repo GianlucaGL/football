@@ -14,7 +14,7 @@ root = lxml.html.fromstring(html)
 sections = root.cssselect("tr")
 for section in sections:
   print section.text.encode('ascii', 'ignore')
-  print name.attrib['href']
+  print section.attrib['href']
 
 # # Find something on the page using css selectors
 #root = lxml.html.fromstring(html)
