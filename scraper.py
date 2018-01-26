@@ -38,7 +38,7 @@ sections = root.cssselect("tr")
 for name in sections:
  # print name.text
   print name.text.encode('ascii', 'ignore')
-  print name.attrib['href']
+  #print name.attrib['href']
   
   
   #store the link in the variable 'record' under the key 'link'
@@ -52,7 +52,7 @@ for name in sections:
 #for age in ages:
  #div = age.text_content().encode('ascii','ignore')
 # if "years" in div:
-  print age.text.encode('ascii', 'ignore')
+  #print age.text.encode('ascii', 'ignore')
 #record['ages'] = name.text.encode('ascii', 'ignore')
 #print record
   
