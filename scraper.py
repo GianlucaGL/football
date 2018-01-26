@@ -41,7 +41,7 @@ for age in ages:
   print name.text.encode('ascii', 'ignore')
   print name.attrib['href']
 record['ages'] = name.text.encode('ascii', 'ignore')
-  print record
+print record
   
   
                       
