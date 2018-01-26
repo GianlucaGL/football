@@ -35,13 +35,14 @@ for name in names:
 
 root = lxml.html.fromstring(html)
 ages = root.cssselect("tr")
-for age in ages:
- div = tr.text_content().encode('ascii','ignore')
- if "years" in div:
-  print name.text.encode('ascii', 'ignore')
-  print name.attrib['href']
-record['ages'] = name.text.encode('ascii', 'ignore')
-print record
+print ages
+#for age in ages:
+ #div = tr.text_content().encode('ascii','ignore')
+ #if "years" in div:
+  #print name.text.encode('ascii', 'ignore')
+  #print name.attrib['href']
+#record['ages'] = name.text.encode('ascii', 'ignore')
+#print record
   
   
                       
