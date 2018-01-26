@@ -22,6 +22,14 @@ record = {}
   #record['name'] = name.text.encode('ascii', 'ignore')
   #print record
   #scraperwiki.sqlite.save(unique_keys=['link'], data=record)
+  
+root = lxml.html.fromstring(html)
+sections = root.cssselect("tr")
+for section in sections:
+ # print name.text
+  print section.text.encode('ascii', 'ignore')
+  #print name.attrib['href']
+  
 
 # tds = root.cssselect("td div")
 # print 'THESE ARE THE TDS', tds
@@ -33,13 +41,7 @@ record = {}
   #record['age'] = div
   #scraperwiki.sqlite.save(unique_keys=['age'], data=record, table_name="ages")
 
-root = lxml.html.fromstring(html)
-sections = root.cssselect("tr")
-for section in sections:
- # print name.text
-  print section.text.encode('ascii', 'ignore')
-  #print name.attrib['href']
-  
+
   
   #store the link in the variable 'record' under the key 'link'
   #record['link'] = name.attrib['href']
