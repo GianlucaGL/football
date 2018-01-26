@@ -37,7 +37,7 @@ root = lxml.html.fromstring(html)
 ages = root.cssselect("tr")
 print ages
 for age in ages:
- #div = tr.text_content().encode('ascii','ignore')
+ div = tr.text_content().encode('ascii','ignore')
  if "years" in div:
   print age.text.encode('ascii', 'ignore')
   print age.attrib['href']
