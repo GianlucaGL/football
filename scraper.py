@@ -34,17 +34,14 @@ for name in names:
   #scraperwiki.sqlite.save(unique_keys=['age'], data=record, table_name="ages")
 
 root = lxml.html.fromstring(html)
-nages = root.cssselect("tr")
-for name in nages:
-  # print name.text
+ages = root.cssselect("tr")
+for age in ages:
+ div = tr.text_content().encode('ascii','ignore')
+ if "years" in div:
   print name.text.encode('ascii', 'ignore')
   print name.attrib['href']
-  #store the link in the variable 'record' under the key 'link'
-  record['link'] = name.attrib['href']
-  record['name'] = name.text.encode('ascii', 'ignore')
+record['ages'] = name.text.encode('ascii', 'ignore')
   print record
-  scraperwiki.sqlite.save(unique_keys=['link'], data=record)
-
   
   
                       
