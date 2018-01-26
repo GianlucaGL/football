@@ -35,9 +35,9 @@ for name in names:
 
 root = lxml.html.fromstring(html)
 sections = root.cssselect("tr")
-for name in sections:
+for section in sections:
  # print name.text
-  print name.text.encode('ascii', 'ignore')
+  print section.text.encode('ascii', 'ignore')
   #print name.attrib['href']
   
   
