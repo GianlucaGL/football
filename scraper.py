@@ -14,6 +14,8 @@ root = lxml.html.fromstring(html)
 trs = root.cssselect("tr")
 for tr in trs:
   divs = tr.cssselect("td div")
+  if len(divs) < 1:
+      continue
   print "Length is {}".format(len(divs))
   print "Name is {}".format(divs[0])
   print "Age is {}".format(divs[1])
