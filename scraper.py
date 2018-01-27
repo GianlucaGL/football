@@ -11,11 +11,19 @@ html = scraperwiki.scrape("https://uk.soccerway.com/teams/england/chelsea-footba
 record = {}
 
 root = lxml.html.fromstring(html)
-sections = root.cssselect("tr")
-for section in sections:
-  divs = section.cssselect("td div")
-  for div in divs:
-      print "This div is: {}".format(div.text_content().encode('ascii', 'ignore'))
+trs = root.cssselect("tr")
+for tr in trs:
+  divs = tr.cssselect("td div")
+  print "Name is {}".format(divs[0])
+  print "Age is {}".format(divs[1])
+  print "We don't care about {}".format(divs[2])
+  print "The second name is {}".format(divs[3])
+  print "The second age is {}".format(divs[4])
+  print "We don't care about {}".format(divs[5])
+  # for div in divs:
+  #     print "This div is: {}".format(div.text_content().encode('ascii', 'ignore'))
+      
+      # print div.text_content()  # This is the same as: print "{}".format(div.text_content())
   # names = root.cssselect("td div a")
   # if section = root.cssselect("td div a")
   # print section.text.encode('ascii', 'ignore')
