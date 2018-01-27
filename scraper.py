@@ -24,6 +24,7 @@ for tr in trs:
   print "Age is {}".format(divs[1].text_content().encode('ascii', 'ignore'))
   record["age"] = divs[1]
   record["name"] = divs[0]
+  scraperwiki.sqlite.save(unique_keys=['name'], data=record)
   # print "We don't care about {}".format(divs[2].text_content().encode('ascii', 'ignore'))
   if len(divs) == 3:
     # There is only one player in the <tr>.
