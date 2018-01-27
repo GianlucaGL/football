@@ -17,12 +17,12 @@ for tr in trs:
   if len(divs) < 1:
       continue
   print "Length is {}".format(len(divs))
-  print "Name is {}".format(divs[0])
-  print "Age is {}".format(divs[1])
-  print "We don't care about {}".format(divs[2])
-  print "The second name is {}".format(divs[3])
-  print "The second age is {}".format(divs[4])
-  print "We don't care about {}".format(divs[5])
+  print "Name is {}".format(divs[0].text_content().encode('ascii', 'ignore'))
+  print "Age is {}".format(divs[1].text_content().encode('ascii', 'ignore'))
+  print "We don't care about {}".format(divs[2].text_content().encode('ascii', 'ignore'))
+  print "The second name is {}".format(divs[3].text_content().encode('ascii', 'ignore'))
+  print "The second age is {}".format(divs[4].text_content().encode('ascii', 'ignore'))
+  print "We don't care about {}".format(divs[5].text_content().encode('ascii', 'ignore'))
   # for div in divs:
   #     print "This div is: {}".format(div.text_content().encode('ascii', 'ignore'))
       
