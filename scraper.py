@@ -14,7 +14,7 @@ root = lxml.html.fromstring(html)
 trs = root.cssselect("tr")
 for tr in trs:
   divs = tr.cssselect("td div")
-  if len(divs) < 1:
+  if len(divs) != 3 and len(divs) != 6:
       # If there are no divs, skip this tr.
       continue
   # Each player is described by three divs (name, age, stats) and
@@ -22,13 +22,13 @@ for tr in trs:
   print "Length is {}".format(len(divs))
   print "Name is {}".format(divs[0].text_content().encode('ascii', 'ignore'))
   print "Age is {}".format(divs[1].text_content().encode('ascii', 'ignore'))
-  print "We don't care about {}".format(divs[2].text_content().encode('ascii', 'ignore'))
+  # print "We don't care about {}".format(divs[2].text_content().encode('ascii', 'ignore'))
   if len(divs) == 3:
     # There is only one player in the <tr>.
     continue
   print "The second name is {}".format(divs[3].text_content().encode('ascii', 'ignore'))
   print "The second age is {}".format(divs[4].text_content().encode('ascii', 'ignore'))
-  print "We don't care about {}".format(divs[5].text_content().encode('ascii', 'ignore'))
+  # print "We don't care about {}".format(divs[5].text_content().encode('ascii', 'ignore'))
   # for div in divs:
   #     print "This div is: {}".format(div.text_content().encode('ascii', 'ignore'))
       
