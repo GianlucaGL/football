@@ -13,10 +13,11 @@ record = {}
 root = lxml.html.fromstring(html)
 sections = root.cssselect("tr")
 for section in sections:
-  names = root.cssselect("td div a")
-  if section = root.cssselect("td div a")
-  print section.text.encode('ascii', 'ignore')
-  print section.attrib['href']
+  print "This section is: {}".format(section)
+  # names = root.cssselect("td div a")
+  # if section = root.cssselect("td div a")
+  # print section.text.encode('ascii', 'ignore')
+  # print section.attrib['href']
 
 # # Find something on the page using css selectors
 #root = lxml.html.fromstring(html)
