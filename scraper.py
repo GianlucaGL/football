@@ -13,7 +13,9 @@ record = {}
 root = lxml.html.fromstring(html)
 sections = root.cssselect("tr")
 for section in sections:
-  print "This section is: {}".format(section.text_content().encode('ascii', 'ignore'))
+  divs = section.cssselect("td div")
+  for div in divs:
+      print "This div is: {}".format(div.text_content().encode('ascii', 'ignore'))
   # names = root.cssselect("td div a")
   # if section = root.cssselect("td div a")
   # print section.text.encode('ascii', 'ignore')
